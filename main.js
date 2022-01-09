@@ -55,23 +55,18 @@ window.addEventListener("click", (e) => {
         changeLock ()
 
         // конец игры
-        if (document.querySelectorAll('.vertical').length === 0) {
+        if (document.querySelectorAll('.horizontal').length === 0 || document.querySelectorAll('.vertical').length === 0) {
             setTimeout(() => {
-                let arr = document.querySelectorAll('.valve');
-                for (let i = 0; i < 16; i++) {
-                    arr[i].style.setProperty("transform", "translatex(calc(100vw - 150px)");
-                }
+
                 setTimeout(() => {
                     document.querySelector(".grid__wrapper").innerHTML = '';
-                    let valve = document.createElement("div");
-                    valve.classList.add('restartValve');
-                    valve.classList.add('foreverValve');
+                    document.querySelector(".lock").innerHTML = ''
 
                     let button = document.createElement("button");
                     button.textContent = "restart";
 
                     button.onclick = restart;
-                    document.querySelector('.grid__wrapper').appendChild(valve);
+
                     document.querySelector('.grid__wrapper').appendChild(button);
                 }, 500);
             }, 500);
@@ -80,8 +75,10 @@ window.addEventListener("click", (e) => {
 }, false)
 
 function restart () {
-    const clear = document.querySelector(".grid__wrapper");
-    clear.innerHTML = '';
+    const clearG = document.querySelector(".grid__wrapper");
+    const clearL = document.querySelector(".lock")
+    clearG.innerHTML = '';
+    clearL.innerHTML = '';
     gridCreator()
 }
 
@@ -121,3 +118,4 @@ function changeLock () {
 }
 
 gridCreator()
+
