@@ -1,0 +1,106 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lock {
+    display: flex;
+    flex-direction: row;
+    width: 80vh;
+    height: 18vh;
+}
+
+.locker {
+    height: 18vh;
+    width: 18vh;
+    margin: 1vh;
+    background: url("img/Frame 2.png") center center / cover
+}
+
+.locked {
+    display: flex;
+    height: 18vh;
+    width: 18vh;
+    margin: 1vh;
+    background: url("img/Frame 2.png") center center / cover
+}
+
+.unlocked {
+    opacity: 0;
+    height: 18vh;
+    width: 18vh;
+    margin: 1vh;
+    background: url("img/Frame 2.png") center center / cover
+}
+
+.grid__wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    width: 80vh;
+    height: 80vh;
+    margin: 0 auto;
+
+    background: #f5f5f5;
+    border-radius: 1vh;
+}
+
+.foreverValve {
+    grid-column: 2/4;
+    grid-row: 1/2;
+    animation-name: rotation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+
+button {
+    position: relative;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: darkcyan;
+    outline: none;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    font-size: 12px;
+    grid-column: 2/4;
+    grid-row: 1/2;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+button {
+    grid-column: 2/4;
+    grid-row: 3;
+}
+
+.hidden {
+    display: none;
+}
+
+
+.valve {
+    height: 18vh;
+    width: 18vh;
+    margin: 1vh;
+    background: url("img/Frame 1.png") center center / cover
+}
+
+.restartValve {
+    height: 18vh;
+    width: 18vh;
+    margin: 1vh;
+    background: url("img/Frame 1.png") center center / cover
+}
+
+.vertical {
+    transform: rotate(90deg);
+}
+
+.horizontal {
+    transform: rotate(0deg);
+}
