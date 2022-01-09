@@ -55,7 +55,7 @@ window.addEventListener("click", (e) => {
         changeLock ()
 
         // конец игры
-        if (document.querySelectorAll('.horizontal').length === 0 || document.querySelectorAll('.vertical').length === 0) {
+        if (document.querySelectorAll('.vertical').length === 0) {
             setTimeout(() => {
                 let arr = document.querySelectorAll('.valve');
                 for (let i = 0; i < 16; i++) {
